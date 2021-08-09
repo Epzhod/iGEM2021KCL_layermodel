@@ -26,34 +26,36 @@ HF = horizontal_face = {
 VW = vertical_wedge = [1.75, 5, 1.75] # holes solid holes
 HW = horizontal_wedge = [4, 2.5, 4] # solid holes solid
 
-VO = vertical_edge = [0.25, 0.6, 0.7, 1.3, 1.75] # multiply by four for whole circle; (3.5 side/2 = 1.75)
-HO = horizontal_edge = [1.2, 0.75, 0.6, 0.6, 0.5, 0.5] #top of shortest + side*5; again mutlipy by four
+VO = vertical_edge = [VF['w1'][2], VF['3'][2], VF['2'][2], VF['1'][2], 0.5*(VF['1'][0])] # multiply by four for whole circle; (3.5 side/2 = 1.75)
+HO = horizontal_edge = [HF['1'][0], HF['1'][2], HF['2'][2], HF['3'][2], HF['L'][2], HF['L'][2]] #top of shortest + side*5; again mutlipy by four
 
 
 def S_trap (a, b, h = H):
+    # formula for calculating surface area of a trapezoid
     return (a+b)*0.5*h
 
 
 def S_face ( M ):
-    
+    # general calculation of a face
     result = 0
 
     result += S_trap(M['1'][0], M['1'][1])
     result += S_trap(M['2'][0], M['2'][1])
     result += S_trap(M['3'][0], M['3'][1])
-    result += S_trap(M['w1'][0], M['w1'][1])
 
     return result
 
 def S_vertical_face (M = vertical_face):
     result = S_face(M) # irregular logs on one side
+    result += S_trap(M['w1'][0], M['w1'][1])
     result = result*2 # double it
     result += 3*H*5 # regular logs between the wedge
 
     return result
 
 def S_horizontal_face (M = horizontal_face):
-    result = S_face(M) # irregular logs on one side
+    result = 2*(S_face(M)) # irregular logs on each side
+    result += S_trap(M['w1'][0], M['w1'][1])*(H/2)
     result += 3.3*(H/2)*2 # the w2 bit
     result += 12*H # regular log
     result = result*2 # double it
