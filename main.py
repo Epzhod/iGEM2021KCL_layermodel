@@ -79,6 +79,7 @@ def S_wedge (M1 = vertical_wedge, M2 = horizontal_wedge):
     result = result*2 # double it because both wedges
 
     return result # for vertical + horizontal 
+    
 
 
 def S_edge (M1 = vertical_edge, M2 = horizontal_edge):
@@ -142,10 +143,18 @@ print(S_vertical_channels())
 print(S_horizontal_channels())
 
 
-S_outside = S_vertical_face() + S_horizontal_face() + S_wedge() + S_edge() + S_vertical_channels (M = vertical_face, full = False) + S_horizontal_channels (M = horizontal_face, full = True)
+S_outside = S_vertical_face() + S_horizontal_face() + S_wedge() + S_edge() + S_vertical_channels (M = vertical_face, full = False) + S_horizontal_channels (M = horizontal_face, full = False)
 
 print(S_outside)
 
 S_inside = S_wedge() + S_edge() + S_vertical_channels() + S_horizontal_channels()
 
 print(S_inside)
+
+S_inside_outer = S_wedge() + S_edge()
+
+print(S_inside_outer)
+
+S_diff = S_inside - S_inside_outer
+
+print(S_diff)
