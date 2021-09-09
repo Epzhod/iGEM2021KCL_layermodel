@@ -1,7 +1,7 @@
 class LayerCalc:
      
     def __init__(self, inlen):
-        self.INLEN = inlen
+        self.INLEN = inlen # length of scaffold as input; input is in the form of LayerCalc(inlen) aka object definition
         
         # Error correction applied to this numbers is likely to lead to an overestimation of the actual surface area
 
