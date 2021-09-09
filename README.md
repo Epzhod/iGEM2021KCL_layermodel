@@ -17,3 +17,6 @@
  - PHIG = 33.7/(10**7) : hight of protein in mm [calculated in PyMOL, see dimesions.png]
  - PRMW = 14008.9221 : molecular weight of protein (g/mol) [calculated in PyMOL]
  - AVGC = 6.02214076 * (10**23)  : avogadro constant [referenced from Encyclopedia Britannica]
+
+#### In order to create dimensions.png PyMOL was used with this script: https://pymolwiki.org/index.php/Draw_Protein_Dimensions
+#### Credit goes to Pablo Guardado Calvo as the creator of the script
