@@ -7,6 +7,7 @@
  - dimensions.png: measurments of a unit of Pvfp-5
  - calcer.py: improvement upon constats.py, same functions but in the form of a class
  - graphing.ipynb: Jupyter Notebook to plot things as needed
+ - calcer.html: same as calcer.py, but html+javascript so its more accessible
  
  ## Constants used:
  - ENDS = 291 : the surface area of the vertical and horizontal 0.5mm slices at each end of the scaffold [calculated by surface_area_static.py]
