@@ -1,4 +1,4 @@
-# layermodel
+# PVFP5 to PCL amount binding model
 
 ## Files:
  - surface_area_static.py: the calculations of the surface area of the elements of the scaffold
