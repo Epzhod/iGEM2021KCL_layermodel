@@ -145,16 +145,16 @@ print(S_horizontal_channels())
 
 S_outside = S_vertical_face() + S_horizontal_face() + S_wedge() + S_edge() + S_vertical_channels (M = vertical_face, full = False) + S_horizontal_channels (M = horizontal_face, full = False)
 
-print(S_outside)
+print(S_outside) # value for ENDS, the two 0.5mm slices on each side of the scaffold
 
 S_inside = S_wedge() + S_edge() + S_vertical_channels() + S_horizontal_channels()
 
-print(S_inside)
+print(S_inside) # value for INNER + OUTER, the surface area of 1mm slice without the ends including the channels
 
 S_inside_outer = S_wedge() + S_edge()
 
-print(S_inside_outer)
+print(S_inside_outer) # value for OUTER, the the surface area of 1mm slice without the ends without the channels
 
 S_diff = S_inside - S_inside_outer
 
-print(S_diff)
+print(S_diff) # value for INNER, the the surface area of 1mm slice of channel surface area
