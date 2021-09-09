@@ -19,5 +19,5 @@
  - AVGC = 6.02214076 * (10**23)  : avogadro constant [referenced from Encyclopedia Britannica]
 
 ### Protein Dimensions
-In order to create dimensions.png PyMOL was used with this script: https://pymolwiki.org/index.php/Draw_Protein_Dimensions
+In order to create dimensions.png PyMOL was used with this script: https://pymolwiki.org/index.php/Draw_Protein_Dimensions <br/>
 Credit goes to Pablo Guardado Calvo as the creator of the script
